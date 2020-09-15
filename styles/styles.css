@@ -232,10 +232,6 @@ body {
     background-size: cover;
 }
 
-.footer-nav-container {
-
-}
-
 /* --- Typography --- */
 
 .text-white {
@@ -272,13 +268,6 @@ a {
     font-size: 1.5rem;
 }
 
-.footer-list-header {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    margin: 0;
-    margin-block-start: 0;
-}
-
 /* General text */
 
 .section-paragraph {
@@ -291,12 +280,17 @@ a {
     font-weight: 600;
 }
 
+.footer-nav-item a:hover {
+    color: #C2F2A4;
+    transition: ease-in-out 0.2s;
+}
+
 /* --- Navbar --- */
 
 .nav-item {
     height: 2rem;
     width: 5rem;
-    padding: 2rem;
+    padding: 1rem;
     font-size: 1.3rem;
     text-align: center;
     line-height: 2rem;
@@ -419,6 +413,11 @@ a {
 
 .social-icon {
     color: #f9fadf
+}
+
+.social-icon:hover {
+    color: #C2F2A4;
+    transition: ease-in-out 0.2s;
 }
 
 /* --- Media Queries --- */
