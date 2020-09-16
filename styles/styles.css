@@ -259,6 +259,10 @@ a {
     color: inherit;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 /* --- Headers --- */
 
 .logo-name {
@@ -552,6 +556,10 @@ a {
     }
    
     .d-sm {
+        display: flex;
+    }
+
+    .sm-map-legend-container {
         display: block;
     }
 
@@ -568,6 +576,10 @@ a {
         height: inherit;
         min-height: 25rem;
         padding: 2rem 0;
+    }
+
+    .footer-list-item {
+        margin-top: 0.5rem;
     }
 
 }
