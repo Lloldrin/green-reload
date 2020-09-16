@@ -159,6 +159,10 @@ body {
     text-align: center;
 }
 
+.bg-gray {
+    background: #202020;
+}
+
 /* --- Containers --- */
 
 .hero-img-container {
@@ -293,8 +297,9 @@ a {
 }
 
 .sm-menu-day-header {
-    font-size: 3rem;
-    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 2.5rem;
+    margin-left: 1rem
 }
 
 .card-header {
@@ -310,6 +315,11 @@ a {
     font-size: 2rem;
     font-family: "Caveat";
     font-weight: 700;
+}
+
+.insta-header a:hover {
+    color: #C2F2A4;
+    transition: ease-in-out 0.2s;
 }
 
 /* General text */
@@ -412,7 +422,7 @@ a {
 }
 
 .menu-alternative {
-    background: #F1FFE9AA;
+    background: #F1FFE9CC;
 }
 
 .card-img-container {
@@ -491,6 +501,8 @@ a {
     background: url(../img/instagram_4.jpg) no-repeat scroll center;
     background-size: cover;
 }
+
+
 
 /* --- Map styling --- */
 
@@ -578,8 +590,17 @@ a {
         padding: 2rem 0;
     }
 
+    .insta-header {
+        margin-left: 0;
+        text-align: center;
+    }
+
     .footer-list-item {
         margin-top: 0.5rem;
+    }
+
+    .footer-bottom-container .footer-list-item:last-of-type {
+        margin-bottom: 0.5rem;
     }
 
 }
