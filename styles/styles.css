@@ -24,11 +24,13 @@ body {
     background-color: #fff;
 }
 
-.row {
+.row,
+.card-row,
+.footer-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: auto;
+    width: 100%;
 }
 
 .column {
@@ -70,6 +72,11 @@ body {
 
 .p-1 {
     padding: 1rem
+}
+
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .pt-1 {
@@ -173,6 +180,12 @@ body {
     left: 5rem;
 }
 
+.sm-logo-container {
+    height: 15rem;
+    background: #F1FFE9A0;
+    padding: 3rem;
+}
+
 .navbar-container {
     height: 100%;
     width: 20vw;
@@ -193,41 +206,6 @@ body {
     background: linear-gradient(90deg, rgba(224, 250, 208, 1) 0%, rgba(224, 250, 208, 1) 60%, rgb(249, 250, 223) 100%);
 }
 
-.about-img {
-    height: 13rem;
-    width: 13rem;
-    border-radius: 50%;
-    position: relative;
-}
-
-.circle-1 {
-    top: -2rem;
-    left: 2rem;
-    background: url(../img/circle_1.jpg) no-repeat scroll center;
-    background-size: cover;
-}
-
-.circle-2 {
-    top: -1.8rem;
-    left: 4rem;
-    background: url(../img/circle_2.jpg) no-repeat scroll center;
-    background-size: cover;
-}
-
-.circle-3 {
-    top: -23rem;
-    left: 14.5rem;
-    background: url(../img/circle_3.jpg) no-repeat scroll center;
-    background-size: cover;
-}
-
-.circle-4 {
-    top: -22.8rem;
-    left: 16.5rem;
-    background: url(../img/circle_4.jpg) no-repeat scroll center;
-    background-size: cover;
-}
-
 .about-section-container {
     height: 25rem;
     flex-basis: content;
@@ -240,6 +218,7 @@ body {
 .day-menu {
     height: 20rem;
 }
+
 .menu-container {
     padding-top: 8rem;
 }
@@ -296,7 +275,8 @@ a {
 }
 
 .section-header,
-.menu-day-header {
+.menu-day-header,
+.sm-menu-day-header {
     font-size: 3rem;
     font-family: 'Merienda', cursive;
     color: #202020;
@@ -308,8 +288,18 @@ a {
     margin-left: 15%;
 }
 
+.sm-menu-day-header {
+    font-size: 3rem;
+    text-align: center;
+}
+
 .card-header {
     font-size: 1.5rem;
+}
+
+.sm-card-header {
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .insta-header {
@@ -325,6 +315,10 @@ a {
     text-align: justify;
     color: #606060;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.sm-card-text {
+    font-size: 1.2rem;
 }
 
 .footer-nav-item {
@@ -352,6 +346,44 @@ a {
     height: 1px;
     width: 7rem;
     border-bottom: 2px solid black;
+}
+
+/* --- About Us Styling --- */
+
+
+.about-img {
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle-1 {
+    top: -2rem;
+    left: 2rem;
+    background: url(../img/circle_1.jpg) no-repeat scroll center;
+    background-size: cover;
+}
+
+.circle-2 {
+    top: -1.8rem;
+    left: 4rem;
+    background: url(../img/circle_2.jpg) no-repeat scroll center;
+    background-size: cover;
+}
+
+.circle-3 {
+    top: -23rem;
+    left: 14.5rem;
+    background: url(../img/circle_3.jpg) no-repeat scroll center;
+    background-size: cover;
+}
+
+.circle-4 {
+    top: -22.8rem;
+    left: 16.5rem;
+    background: url(../img/circle_4.jpg) no-repeat scroll center;
+    background-size: cover;
 }
 
 /* --- Card Styling --- */
@@ -407,6 +439,23 @@ a {
     margin-left: auto;
 }
 
+.sm-card {
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sm-card-img-container {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sm-card-img {
+    width: 100%;
+    object-fit: scale-down;
+}
+
 /* --- Instagram Styling --- */
 
 .instagram {
@@ -451,6 +500,13 @@ a {
     border-radius: 0 0 5% 0;
 }
 
+.sm-map-legend-container {
+    height: 12rem;
+    width: 100%;
+    background: #fff;
+    border-radius: 0 0 5% 0;
+}
+
 .map-legend-top-border {
     height: 1rem;
     background: rgb(224, 250, 208);
@@ -460,13 +516,13 @@ a {
 /* --- Footer Styling --- */
 
 .footer-top-container {
-    height: 10rem;
+    min-height: 10rem;
     background: #202020;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer-bottom-container {
-    height: 3.5rem;
+    min-height: 3.5rem;
     background: #FEFFE9;
 }
 
@@ -486,8 +542,32 @@ a {
 
 /* --- Media Queries --- */
 
-@media screen and (max-width: 900px) {
+.d-sm {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
     .row {
         flex-direction: column;
     }
+   
+    .d-sm {
+        display: block;
+    }
+
+    .logo-container,
+    .navbar-container,
+    .map-legend-container,
+    .d-sm-none,
+    .about-img {
+        display: none;
+    }
+
+    .about-container,
+    .about-section-container {
+        height: inherit;
+        min-height: 25rem;
+        padding: 2rem 0;
+    }
+
 }
